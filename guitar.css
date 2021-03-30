@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(187, 186, 186);
+
+}
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:auto min-content ;
+    justify-content: center;
+    justify-items: end;
+    align-items: center;
+    gap: 5px 10px;
+    
+}
+input{
+    margin:0;
+}
