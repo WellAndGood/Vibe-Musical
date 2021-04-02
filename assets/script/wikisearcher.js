@@ -60,16 +60,16 @@ function goWiki() {
             return response.json();
         })
         .then(function (content) {
+            console.log(content)
             var contentLoad = content.query.pages
             var contentLoadKey = Object.keys(content.query.pages)[0]
             var contentLoadContent = contentLoad[contentLoadKey].extract
             let contentHTML = new DOMParser();
             let wikiDoc = contentHTML.parseFromString(contentLoadContent, "text/html")
-            console.log(wikiDoc)
+            // console.log(wikiDoc)
 
             let element = wikiDoc.getElementById("History")
-            console.log("yes", element)
-
+            
             if (!element) {
                 element = wikiDoc.getElementById("History_of_origins") 
             }
@@ -86,14 +86,10 @@ function goWiki() {
                 element = wikiDoc.getElementById("Historical_recorders")    
             }
 
-            console.log("yes", element)
-
             if (element){
-                // console.log(historyDisplay)
                 p1 = element.parentElement.nextElementSibling
                 p2 = p1.nextElementSibling
                 p3 = p2.nextElementSibling
-                // console.log(p1, p2, p3)
                 historyDisplay.appendChild(p1)
                 historyDisplay.appendChild(p2)
                 historyDisplay.appendChild(p3)
