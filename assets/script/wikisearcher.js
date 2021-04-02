@@ -65,10 +65,29 @@ function goWiki() {
             var contentLoadContent = contentLoad[contentLoadKey].extract
             let contentHTML = new DOMParser();
             let wikiDoc = contentHTML.parseFromString(contentLoadContent, "text/html")
-            // console.log(wikiDoc)
+            console.log(wikiDoc)
 
-            const element = wikiDoc.getElementById("History")
-            // console.log(element)
+            let element = wikiDoc.getElementById("History")
+            console.log("yes", element)
+
+            if (!element) {
+                element = wikiDoc.getElementById("History_of_origins") 
+            }
+            if (!element) {
+                element = wikiDoc.getElementById("History_and_evolution_of_the_lute")
+                }
+            if (!element) {
+                element = wikiDoc.getElementById("History_and_development")
+                }
+            if (!element) {
+                element = wikiDoc.getElementById("History_and_genres")    
+            }  
+            if (!element) {
+                element = wikiDoc.getElementById("Historical_recorders")    
+            }
+
+            console.log("yes", element)
+
             if (element){
                 // console.log(historyDisplay)
                 p1 = element.parentElement.nextElementSibling

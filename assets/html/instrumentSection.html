@@ -25,13 +25,25 @@
             <div class="container">
                 <h2>Refine Search</h2>
                  <div class="filter">
+                    <input id="userInput" value="guitar"></input>
+                    <button type="button" id="userButton">Search</button>
+                
+                    <div id="history-display">
+                    </div>
                     <ul>
                         <li>
-                            <button class="woodwind"></button>
-                            <button class="keyboard"></button>
-                            <button class="strings"></button>
-                            <button class="resetFilter"></button>
+                            <button type="button" class="woodwind">Woodwind</button>
                         </li>
+                        <li>
+                            <button type="button" class="keyboard">Keyboard</button>
+                        </li>
+                        <li>
+                            <button type="button" class="strings">String</button>
+                        </li>
+                        <li>
+                            <button type="button" class="resetFilter">Reset Filter</button>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -93,6 +105,6 @@
     </main>
     
     <!-- Javascript -->
-    <script src=""></script>
+    <script src="../script/wikisearcher.js"></script>
 </body>
 </html>
