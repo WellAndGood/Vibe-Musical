@@ -6,73 +6,140 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vibe Musical</title>
-    
-    <!-- Reset -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!-- Framework -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <title>Vibe Musical | Get to know your Music Better!</title>
+    <link rel="stylesheet" type="text/css" href="../BCS-Project-1/assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../BCS-Project-1/assets/css/style1.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="../BCS-Project-1/assets/css/styleMain.css">
 </head>
 
 <body>
-    <div id="header">
-        <h1>Vibe Musical</h1>
-        
-    </div>
-    <section id="main-container ">
-        
-        <h2>Know your Music Better!</h2>
-        <p>Come and get to know about the most amazing musical instruments and the rich history associated with them and during this journey, create your own music as well... </p>
-        <div class="container" id="main-view">
-            <form>
-                <span class="border-0">
-                    <div class="row align-items-center" id="search-container">
-                        <div class="col-auto m-0">
-                            <i class="fa fa-search fa-lg"></i>
-                        </div>
-                        <div class="col-md-7">
-                            <input id="search-text" type="text" placeholder="Search">
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn" data-music="sweet music" style="margin:10px" type="submit" id="searchBtn">Search Music</button>
-                        </div>
-                    </div>
-                </span>
-            </form>
-            <div class="row text-center">
-                <div class="col">
-                    <button type="button" class="btn trigger active" data-toggle="buttons" style="margin:10px; width:170px" id="artist">Home</button>
-                    <button type="button" class="btn trigger" data-toggle="buttons" style="margin:10px; width:170px" id="track">Instruments</button>
-                    <button type="button" class="btn trigger" data-toggle="buttons" style="margin:10px; width:170px" id="album">Playlist</button>
-                    <button type="button" class="btn trigger" data-toggle="buttons" style="margin:10px; width:170px" id="playlist">Create Magic</button>
+<section class="hero is-success is-fullheight">
+    <div class="hero-head">
+        <header id="navbar" class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="../BCS-Project-1/assets/images/VMlogo.png" id="navLogo" alt="VM logo">
+                </a>
+                <span class="navbar-burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>   
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">
+                        Home
+                    </a>
+
+                    <a class="navbar-item" href="#">
+                        Instruments
+                    </a>
+
+                    <a class="navbar-item" href="#">
+                        Make Magic
+                    </a>
+
+                    
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
     </div>
-    <section class="text-black" id="results-container">
-        <div class="container mb-5">
-            <ol class="feature-list"></ol>
+
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <figure id="logo"class="logoImage ">
+                <img src="../BCS-Project-1/assets/images/VMlogo.png" alt="logo">
+            </figure>
+            <h1 class="title">Know your Music Better</h1>
+            <p class="hero subtitle">Come and get to know about the most amazing musical instruments and the rich history associated with them and during this journey, create your own music as well... </p>
+            
+
         </div>
-    </section>
-    <footer>
-        <div class="footer">
-            <span>
-                <p>&copy; Copyright Team Vibe Musical</p>
-            </span>
-        </div>
-    </footer>
+    </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <div class="hero-foot">
+        <nav class="has-text-centered">
+            <div class="container">  
+                <a class="button is-link is-outlined" href="#about">Learn More</a>         
+            </div>
+        </nav>
+    </div>
+</section>  
+<!-- Landing Page Ends -->
+    
+    
+        <section id="about" class="container is-fullhd is-fluid">
+            <div class="container has-text-centered">
+                <h2 class="title is-2 has-text-centered">About</h2>
+                <p>Vibe Musical, a brand new app that teaches you all about music. We log instruments, and gather their history. Once you find an instrument that you connect with we give you access to tutorials to learn how to play it. If you're feeling creative try checking out our create magic section where you can play and make your own instrument. We look to the future to develop new ways to make learning about music and instruments both easy and fun. </p>
+                <a class="button is-link is-outlined" href="#services">View Services</a>
+            </div>
+        </section>
 
-</body>
+        <!-- About Ends -->
+    <main>    
+        <section id="services" class="container is-fullhd is-fluid ">
+            <h2 class="title is-3 has-text-centered">Services</h2>
+            <div class="tile is-ancestor">
+            <div class="tile is-parent has-text-centered">
+                <div id="history" class="tile is-child is-3 box">
+                    <figure class="image">
+                        <div id="historyImage" class="image is-5by3">
+                            <!-- image -->
+                        </div>
+                    </figure>
+                    <h3 class="title is-4 has-text-centered">History</h3>
+                    <p class="subtitle">We log the rich history of all the world most famous and less notable instruments around the world.</p>
+                    <div class="thisButton">
+                        <a href="#" class="btmButton button is-link is-outlined ">Test</a>
+                    </div>
+                    
+                </div>
 
-</html
+                <div id="vidTut" class="tile is-child is-3 box">   
+                    <figure class="image">
+                        <div id="tutorialImage" class="image is-5by3">
+                            <!-- image -->
+                        </div>
+                    </figure>
+                    <h3 class="title is-4 has-text-centered" >Tutorial</h3>
+                    <p class="subtitle">For every instrument, we log tutorials for them if you are interested in learning how to play the instrument.</p>
+                    <div class="thisButton">
+                        <a href="#" class="btmButton button is-link is-outlined ">Test</a>
+                    </div>
+                </div>
+
+                <div id="createMagic" class="tile is-child is-3 box">
+                    <figure class="image">
+                        <div id="magicImage" class="image is-5by3">
+                            <!-- image -->
+                        </div>
+                    </figure>
+                    <h3 class="title is-4 has-text-centered">Create Magic</h3>
+                    <p class="subtitle">Try our Create Magic application, with this you can make your own music and play various instruments.</p>
+                    <div class="thisButton">
+                        <a href="#" class="btmButton button is-link is-outlined ">Test</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Service Ends -->
+        
+    </main>
+    
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>&copy; Copyright Vibe Musical 2021</p>
+            </div>
+        </footer>
+        <!-- Footer Ends -->
+
+        <!-- Javascript Here -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="../BCS-Project-1/assets/script/main.js"></script>
+    </body>
+</html>

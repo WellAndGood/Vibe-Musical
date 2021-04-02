@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR STYLING */
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+#navbarMenu {
+    background-color: rgb(29, 29, 29);
+}
+
+.navbar-brand {
+    background-color: rgb(29, 29, 29);
+}
+
+/* LANDING PAGE STYLING */
+
+.logoImage {
+    margin: 0 auto 50px;
+    width: 45%;
+
+}
+
+.hero.subtitle{
+    padding: 0 50px;
+}
+
+.hero.is-success {
+    background: linear-gradient(rgba(29, 29, 29, 0.37), rgba(29, 29, 29, 0.37)), url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero.is-success a.navbar-item.is-active {
+    background-color: #d6941a;
+}
+
+.hero.is-success a.navbar-item:hover {
+    background-color: #d6941a;
+}
+
+.button.is-link.is-outlined {
+    background-color: transparent;
+    border-color: #d6941a;
+    color: #d6941a;
+    margin-bottom: 150px;
+}
+
+.button.is-link.is-outlined:hover {
+    border-color: #d6941a;
+    background-color: #d6941a;
+}
+
+/* ABOUT SECTION STYLING */
+
+
+.is-2{
+    color: #e1e1e1;
+}
+
+#about {
+    padding: 100px 50px;
+    height: auto;
+    background-image: url();
+    background-color: rgb(29, 29, 29);
+    height: auto;
+    
+
+}
+
+#about p {
+    margin-bottom: 50px;
+    color: #e1e1e1;
+}
+
+/* SERVICES SECTION STYLING */
+.is-3{
+    color: rgb(29, 29, 29);
+    margin-top: 30px;
+    font-size: 24pt;
+}
+
+#historyImage{
+    background: url('https://images.unsplash.com/photo-1543840950-e6529649ce74?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+}
+
+#tutorialImage {
+    background: url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+#magicImage {
+    background: url('https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+}
+
+.tile.is-parent {
+    margin-bottom: 25px;
+}
+
+.tile.is-child {
+    margin: 35px!important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tile {
+   justify-content: center;
+    height: auto;
+    padding: 15px;
+}
+
+#history a, #vidTut a, #createMagic a {
+    margin-bottom: 0;
+}
+
+.thisButton {
+    text-align: center;
+}
+
+.is-4 {
+    margin-top: 15px;
+}
+
+/* FOOTER SECTION STYLING */
+.footer {
+    color: #e1e1e1;
+    background-color: rgb(29, 29, 29);
+    padding: 1.5rem 4.5rem 2rem;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 1023px){
+    #navbar {
+        border-bottom: 1px solid transparent;
+        
+    }
+
+    #logo {
+        width: 70%;
+    }
+    
+}
