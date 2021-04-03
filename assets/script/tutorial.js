@@ -1,5 +1,5 @@
 var userFormEl = document.querySelector('#tutorialBtn');
-var nameInputEl = document.querySelector('#instrument');
+var nameInputEl = document.querySelector('#userInput');
 var frameEl;
 var video;
 var relatedVideo=[];
@@ -13,7 +13,7 @@ var formSubmitHandler = function (event) {
     document.getElementById("video1").innerHTML = ""
     document.getElementById("video2").innerHTML = ""
     document.getElementById("video3").innerHTML = ""
-    var instrument ="piano"//nameInputEl.value.trim()"";
+    var instrument =nameInputEl.value.trim();
     frameEl=0;
       if (instrument) {
       var x= getVideoID(instrument);
