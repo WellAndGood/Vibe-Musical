@@ -1,9 +1,12 @@
 let searchUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search="
 let contentUrl = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&rvprop=content&format=json&titles="
 
-var userButton = document.getElementById("userButton")
+var userButton = document.getElementById("userButton");
 var userInput = document.getElementById("userInput");
 var historyDisplay = document.getElementById("history-display");
+var historyTitle = document.getElementById("historyTitle");
+var historySource = document.getElementById("history-source");
+var instrumentName = document.getElementById("instrumentTitle");
 
 function setup() {
     noCanvas()
@@ -38,18 +41,20 @@ function goWiki() {
         
         // Isolates the instrument's Wiki Page Title
         let instrumentTitle = data[1][0]
+        instrumentName.textContent += " - More Information on the " + instrumentTitle
+        historyTitle.textContent = "History of the " + instrumentTitle
         // console.log("Instrument's Page Title: " + instrumentTitle)
         let instrumentTitleReg = instrumentTitle.replace(/\s+/g, '_')  // replace 1+ spaces with underscore, applied globally   
         
         // Isolate the instrument's Wiki Page URL
         let instrumentWikiURL = data[3][0]
-        // console.log("Wiki Page URL: " + instrumentWikiURL)
+        historySource.innerHTML = "<br>"
+        historySource.innerHTML += "Brought to you by: <a href='" + instrumentWikiURL + "' target='_blank'>" + instrumentWikiURL + "</a>"
+        console.log(historySource)
 
         // Creates the Wikipedia content link
         let wikiPageContent = contentUrl + instrumentTitleReg
-        // console.log(wikiPageContent)
         let contentRetrievalUrl = herokuApp+wikiPageContent;
-        // console.log(contentRetrievalUrl)
 
         fetch(contentRetrievalUrl, {
             method: 'GET', //GET is the default.
@@ -91,7 +96,9 @@ function goWiki() {
                 p2 = p1.nextElementSibling
                 p3 = p2.nextElementSibling
                 historyDisplay.appendChild(p1)
+                historyDisplay.innerHTML += "<br>"
                 historyDisplay.appendChild(p2)
+                historyDisplay.innerHTML += "<br>"
                 historyDisplay.appendChild(p3)
             }
         })        

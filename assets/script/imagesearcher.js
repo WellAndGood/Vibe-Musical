@@ -1,4 +1,4 @@
-const auth = "563492ad6f91700001000001b67d7a4d70084b3fadf2840d9588bea9"
+const api = "563492ad6f91700001000001b67d7a4d70084b3fadf2840d9588bea9";
 
 var userButton = document.getElementById("userButton")
 var userInput = document.getElementById("userInput");
@@ -20,9 +20,10 @@ function imageFinder() {
         method: 'GET', //GET is the default.
         headers: {
             Accept: 'application/json',
-            Authorization: auth
-            
-        }
+            Authorization: api,    
+        },
+        credentials: 'same-origin'
+        
     }).then(function (response) {
         return response.json();
     })
