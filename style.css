@@ -1,0 +1,57 @@
+body {
+    background-image: black;
+    color: white;
+    background-image: url("display.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    font-family:cursive;
+}
+
+h1 {
+    font-family:cursive;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+#header {
+    background-image: url("https://media.giphy.com/media/I80xj39uays00/giphy.gif");
+    background-size: contfain;
+    background-repeat: repeat;
+    background-color: black;
+    width: 100%;
+    height: 75px;
+    background-position: 0px -100px;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#main-container {
+    background-image: url("display.jpg");
+    
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 100%;
+    width: 100%;
+    font-family:cursive;
+}
+
+.footer {
+    background-color: rgb(173, 148, 146);
+    height: 50px;
+    text-align: center;
+    color: darkslategray;
+    padding-top: 15px;
+}
