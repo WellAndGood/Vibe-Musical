@@ -17,7 +17,7 @@ document.getElementById("stringplay").onclick = function () {
 document.getElementById("sing").onclick = function () {
     location.href = "file:///C:/Users/razda/OneDrive/Desktop/project1/try3/guitar.html";
 
-}
+//end
 
 
     
