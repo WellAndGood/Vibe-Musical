@@ -54,12 +54,12 @@ var formSubmitHandler = function (event) {
  var displayVideo = function(id)
 {
     frameEl= document.createElement('iframe')
-     frameEl.width= "700"; 
+    frameEl.width= "700"; 
     frameEl.allow="autoplay"
     frameEl.setAttribute("id","frame")
     frameEl.height= "500",
     frameEl.allowFullscreen=true
-     frameEl.setAttribute("src","https://www.youtube.com/embed/"+id+"?autoplay=1")
+    frameEl.setAttribute("src","https://www.youtube.com/embed/"+id+"?autoplay=1")
     videoContainerEl.appendChild(frameEl)
           
 };
