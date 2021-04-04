@@ -10,27 +10,63 @@
     <link rel="stylesheet" href="../css/tutorialStyles.css">
 </head>
 <body>
-    <main>
-        <head id="navbar">
-            <img src="../images/VMlogo.png" id="navLogo" alt="VM logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Instruments</a></li>
-                <li><a href="#">Make Magic</a></li>
-                
-            </ul>
-        </head>
+    
+    <header id="navbar" class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="../images/VMlogo.png" id="navLogo" alt="VM logo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>   
+        </div>
 
-        <!--================ About the Instrument Section============-->
-        <section id="history">
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="../../index.html">
+                    Home
+                </a>
+
+                <a class="navbar-item" href="../html/tutorialSection.html">
+                    Instruments
+                </a>
+
+                <a class="navbar-item" href="../html/magic.html">
+                    Make Magic
+                </a>
+
+                
+            </div>
+        </div>
+    </header>
+
+<main>
+        <!--================ Search Section ============-->
+        <section id="Search" class="section is-medium ">
+            <div id="search-container" class="container">
+                <p class="title is-1">Search for an Instrument</p>
+                <div class="field is-grouped">
+                    <div class="control is-expanded">
+                        <input id="userInput" class="input" placeholder="Type in an instrument"></input>
+                    </div> 
+                    <div class="control">
+                        <a href="#history" id="userButton"  class="button is-primary">Search</a>  
+                    </div>    
+                </div>
+            </div>
             
-            <div id="instumentHist" class="container">
-
-                <h1 id="instrumentTitle">Instrument</h1>
-                <input id="userInput" placeholder="Type in an instrument"></input>
-                <button type="button" id="userButton">Search</button>
+        </section>
+             
+    <!--================ About the Instrument Section============-->    
+        <section class="section is-large" id="history">
+            <div class="container is-fullheight">
+               <h1 class="title is-1" id="instrumentTitle">Instrument</h1>
+                <div id="instrumentHist" class="container">  
                 
-                <h2 id="historyTitle"></h2>
+                
+                <h2 id="historyTitle" class="title is-2"></h2>
                 <div id="image-display">
                 </div>
 
@@ -40,37 +76,74 @@
                 <div id="history-source">
                 </div>
 
+<<<<<<< HEAD
                 <button>View Tutorial</button>
 
+=======
+                <h2>
+                    <!-- Instrument name here -->
+                </h2>
+                <p>
+                    <!-- History About Instrument Here -->
+                </p>
+                <button id="tutorialBtn" class="button is-outlined">View Tutorial</button>
+
+            </div> 
+>>>>>>> 4a6ab597484da2973019b935e8a22a696db98e3d
             </div>
+            
 
         </section>
 
 
         <!--============ Video Tutorial Section ===================-->
-        <section id="tutorials" class="container">
-            <div id="first-video" class="">
-                <!-- First video here -->
-            </div>
-
-            <div id="nextVideo">
-                <ul>
-                    
-                </ul>
-            </div>
-
-
-
-        </section>
-
-        <footer>
+        
+    <section id="tutorials" >
+        <div class="container">
+            <h3 class="title is-3">Tutorial</h3>
             
-        </footer>
+        <div id="first-video" class="container">
+                <!-- First Video Here -->
+        </div>
+            
+            <h2>Related videos</h2>
+        <div class="tile is-ancestor">
+            <div id="nextVideo" class="tile is-parent">              
+                <div class="tile is-child" id="video0">
+                    <!-- First Related Video Here -->
+                </div>
 
-    </main>
+                <div class="tile is-child" id="video1">
+                    <!-- Second Related Video Here -->      
+                </div>
+
+                <div class="tile is-child" id="video2">
+                    <!-- Third Related Video Here -->          
+                </div>
+
+                <div class="tile is-child" id="video3">
+                    <!-- Fourth Related Video Here -->         
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+</main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; Copyright Vibe Musical 2021</p>
+        </div>
+    </footer>
+
+    
     <!-- ===== Link Javascript Here ===== -->
-    <script src=""></script>
-    <script src="../script/wikisearcher.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../script/main.js"></script>         
     <script src="../script/imagesearcher.js"></script>
+    <script src="../script/wikisearcher.js"></script>
+    <script src="../script/tutorial.js"></script>
+    <script src="../script/test.js"></script>
+
 </body>
 </html>
