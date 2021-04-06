@@ -158,9 +158,9 @@ function wikipediaAPIQuery(term) {
     fetch(dataRetrievalUrl, {
         method: 'GET',
         headers: {
-            'Content-Type': 'jsonp',
+            'Content-Type': 'application/json',
             'User-Agent': 'Mozilla/5.0',
-            'mode': 'cors',
+            'mode': 'no-cors',
         }
     }).then(function (response) {
         return response.json();
