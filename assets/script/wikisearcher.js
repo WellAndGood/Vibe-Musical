@@ -158,10 +158,9 @@ function wikipediaAPIQuery(term) {
     fetch(dataRetrievalUrl, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'jsonp',
             'User-Agent': 'Mozilla/5.0',
             'mode': 'cors',
-            'Access-Control-Allow-Origin': 'https://www.github.com'
         }
     }).then(function (response) {
         return response.json();
