@@ -161,7 +161,7 @@ function wikipediaAPIQuery(term) {
             'Content-Type': 'application/json',
             'User-Agent': 'Mozilla/5.0',
             'mode': 'cors',
-            'Access-Control-Allow-Origin': '*'
+            'Access-Control-Allow-Origin': 'https://www.github.com'
         }
     }).then(function (response) {
         return response.json();
