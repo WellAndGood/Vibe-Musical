@@ -160,7 +160,8 @@ function wikipediaAPIQuery(term) {
         headers: {
             'Content-Type': 'application/json',
             'User-Agent': 'Mozilla/5.0',
-            'mode': 'cors'
+            'mode': 'cors',
+            'Access-Control-Allow-Origin': *
         }
     }).then(function (response) {
         return response.json();
