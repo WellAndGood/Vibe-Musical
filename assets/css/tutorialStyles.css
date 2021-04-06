@@ -83,13 +83,25 @@
     background-color: #d6941a;
 }
 
+.button.is-warning{
+    background-color: transparent;
+    border-color: #d6941a;
+    color: #d6941a; 
+}
+
+.button.is-warning:hover {
+    color: #1a1919;
+    border-color: #d6941a;
+    background-color: #d6941a;
+}
+
 #Invention {
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
 }
 
-#historyTitle {
+#historyTitle, #Modern_modifications {
     color: #d6941a;
 }
 
@@ -99,7 +111,7 @@
     line-height: 26px;
 }
 
-#instrumentBasic p {
+#instrumentBasic {
     color: #fff;
     font-size: 14pt;
     line-height: 26px;
@@ -123,6 +135,8 @@
     display: flex;
     justify-content: center;
 }
+
+
 
 /* FOOTER SECTION STYLING */
 .footer {
