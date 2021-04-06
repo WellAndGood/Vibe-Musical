@@ -20,6 +20,8 @@ var frameEl;
 var video;
 var relatedVideo=[];
 var videoContainerEl= document.querySelector('#first-video');
+var firstVideoEl = document.querySelector('#first-video')
+var relatedVideosEl = document.querySelector('#nextVideo')
 
 
 // 700+ long array of instruments; search queries are cross-referenced by this list
@@ -134,6 +136,8 @@ function goWiki() {
         instrumentName.textContent = ""
         historyTitle.textContent = ""
         historySource.innerHTML = ""
+        firstVideoEl.textContent = ""
+        relatedVideosEl.textContent = ""
     }
 }
 
