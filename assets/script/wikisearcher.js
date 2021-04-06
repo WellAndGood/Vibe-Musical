@@ -50,6 +50,7 @@ const windInstrumentException = ["Yu"]
 // An attachment to the Wikipedia API URL which handles the CORS error. Might need to be removed when uploaded to Github.
 // const herokuApp = "https://cors-anywhere.herokuapp.com/"
 
+let herokuApp = ""
 let term = "";
 
 // When the 'Search' button is clicked, start the Wiki API (which also launches the YouTube API)
