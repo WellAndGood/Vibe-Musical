@@ -19,7 +19,6 @@ var formSubmitHandler = function (event) {
       var x= getVideoID(instrument);
      // console.log(x)
     
-
      //  nameInputEl.value = '';
      } else {
          alert('Please enter instrument name');
@@ -103,6 +102,5 @@ var displayRelatedVideo = function(item)
     }
           
 };
-
 
   userFormEl.addEventListener('click', formSubmitHandler);
