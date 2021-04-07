@@ -145,6 +145,20 @@ span {
     justify-content: center;
 }
 
+.ui-autocomplete .ui-menu-item {
+    background: white;
+    width: 56%;
+    padding: 5px;
+    padding-left: 10px;
+    opacity: 0.85;
+    border: 0.5px grey solid;
+}
+
+.ui-autocomplete .ui-menu-item:hover {
+    background: rgb(22, 22, 22);
+    color: white;
+    opacity: 1.0
+}
 
 
 /* FOOTER SECTION STYLING */
