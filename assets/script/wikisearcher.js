@@ -61,7 +61,7 @@ userButton.addEventListener("click", function(){
     goWiki()
 })
 
-// When the 'Randomizer' button is pressed, resets the 
+// When the 'Randomizer' button is pressed, resets the innerHTML and chooses a random index to apply to the instrumentWikiList
 randomButton.addEventListener("click", function(){
     historyDisplay.innerHTML = ""
     randomizer()
@@ -76,34 +76,6 @@ function randomizer() {
     wikipediaAPIQuery(term)
     formSubmitHandler(term)
 }
-
-// The exeption handler; it returns correctly, but does not result in a changed 'term'
-// function exceptionHandler(possible, list, handler) {
-//     console.log(term, list, handler)
-//     for (i = 0; i < list.length; i++) {
-//         if (possible === list[i]) {
-//             console.log("Found " + term + " in " + Object.keys({list})[0])
-//             term = possible + handler
-//             console.log(term)
-//             return;
-//         }
-//     }
-// }
-
-// function handlePossibleTerms() {
-//     exceptionHandler(term, accordionException, "_(accordion)");
-//     exceptionHandler(term, drumException, "_(drum)");
-//     exceptionHandler(term, fluteException, "_(flute)");
-//     exceptionHandler(term, instrumentException, "_(instrument)");
-//     exceptionHandler(term, musicException, "_(music)");
-//     exceptionHandler(term, musicInstrumentException, "_(musical_instrument)");
-//     exceptionHandler(term, organException, "_(organ)");
-//     exceptionHandler(term, panpipeException, "_(panpipe)");
-//     exceptionHandler(term, persianInstrumentException, "_(Persian_instrument)");
-//     exceptionHandler(term, stringInstrumentException, "_(string_instrument)");
-//     exceptionHandler(term, trumpetException, "_(trumpet)");
-//     exceptionHandler(term, windInstrumentException, "_(wind_instrument)");
-// }
 
 function goWiki() {
     
