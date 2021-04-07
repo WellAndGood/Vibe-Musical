@@ -18,7 +18,7 @@ var errorMessage = document.getElementById("error-message")
 var nameInputEl = document.querySelector('#userInput');
 var frameEl;
 var video;
-var relatedVideo=[];
+var relatedVideo = [];
 var videoContainerEl= document.querySelector('#first-video');
 var firstVideoEl = document.querySelector('#first-video')
 var relatedVideosEl = document.querySelector('#nextVideo')
@@ -76,7 +76,6 @@ function randomizer() {
     wikipediaAPIQuery(term)
     formSubmitHandler(term)
 }
-
 
 // The exeption handler; it returns correctly, but does not result in a changed 'term'
 // function exceptionHandler(possible, list, handler) {
@@ -311,7 +310,7 @@ var getVideoID = function (userInput) {
     frameEl.setAttribute("id","frame")
     frameEl.height= "500",
     frameEl.allowFullscreen=true
-    frameEl.setAttribute("src","https://www.youtube.com/embed/"+id+"?autoplay=1")
+    frameEl.setAttribute("src","https://www.youtube.com/embed/"+id+"?autoplay=0")
     videoContainerEl.appendChild(frameEl)  
 };
   
@@ -322,10 +321,11 @@ var getRelatedVideoID = function(idVideo) {
     fetch(apiUrl)
     .then(function (response) {
         if (response.ok) {
-            response.json().then(function (data) {
-            relatedVideo=data.items
-            displayRelatedVideo(relatedVideo)
-        });
+            response.json()
+    .then(function (data) {
+        relatedVideo = data.items
+        displayRelatedVideo(relatedVideo)
+    });
         } else { 
             alert('Error: ' + response.statusText);
         }
@@ -344,7 +344,7 @@ var displayRelatedVideo = function(item) {
         relatedVideoId=item[i].id.videoId
         myframeEl.setAttribute("id","frame")
         myframeEl.allowFullscreen=true
-        myframeEl.setAttribute("src","https://www.youtube.com/embed/"+relatedVideoId+"?autoplay=1")
+        myframeEl.setAttribute("src","https://www.youtube.com/embed/"+relatedVideoId+"?autoplay=0")
         document.getElementById("video"+i).appendChild(myframeEl)
     }        
 };
