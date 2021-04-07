@@ -68,16 +68,16 @@
 #about {
     padding: 100px 50px;
     height: auto;
-    background-image: url();
     background-color: rgb(29, 29, 29);
-    height: auto;
-    
-
 }
 
 #about p {
     margin-bottom: 50px;
     color: #e1e1e1;
+}
+
+#about .button.is-link.is-outlined {
+    margin: 10px 0;
 }
 
 /* SERVICES SECTION STYLING */
@@ -100,23 +100,6 @@
 #magicImage {
     background: url('https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     background-size: cover;
-}
-
-.tile.is-parent {
-    margin-bottom: 25px;
-}
-
-.tile.is-child {
-    margin: 35px!important;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.tile {
-   justify-content: center;
-    height: auto;
-    padding: 15px;
 }
 
 #history a, #vidTut a, #createMagic a {
@@ -149,4 +132,11 @@
         width: 70%;
     }
     
+}
+
+@media only screen and (min-width: 380px) {
+
+    #userInput {
+        width: 100%;
+    }
 }
