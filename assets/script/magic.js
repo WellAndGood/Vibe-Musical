@@ -14,7 +14,7 @@ document.getElementById("keyplay").onclick = function () {
 document.getElementById("stringplay").onclick = function () {
     location.href = "https://musiclab.chromeexperiments.com/Strings/";
 };
-//document.getElementById("sing").onclick = function () {
+//document.getElementById("singplay").onclick = function () {
  //   location.href = "file:///C:/Users/razda/OneDrive/Desktop/project1/try3/guitar.html";
 // not adding the sound theramin
 

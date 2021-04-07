@@ -103,6 +103,7 @@
 
 #historyTitle, #Modern_modifications {
     color: #d6941a;
+    margin: 30px 0 7px;
 }
 
 #history-display p {
@@ -115,6 +116,14 @@
     color: #fff;
     font-size: 14pt;
     line-height: 26px;
+}
+
+#history-source {
+    color: #fff;
+}
+
+span {
+    color: #fff;
 }
 
 

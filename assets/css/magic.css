@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR STYLING */
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    background-color: transparent;
+    
+}
+
+#navbarMenu {
+    background-color: rgb(29, 29, 29);
+}
+
+#navbarMenu a {
+    color: #e1e1e1;
+}
+
+#navbarMenu a:hover{
+    background-color: #d6941a;
+}
+
+.navbar-brand {
+    background-color: rgb(29, 29, 29);
+}
+
+/* HERO IMAGE SECTION */
+
+#heroImage {
+    background: linear-gradient(rgba(29, 29, 29, 0.1), rgba(29, 29, 29, 0.1)), url('https://images.pexels.com/photos/159206/mixing-table-mixing-music-musician-159206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: 0 -275px;
+    background-attachment: fixed;
+    
+}
+
+
+
+/* ABOUT SECTION */
+
+h1.title.is-1 {
+    color: #d6941a;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+#about {
+    background-color: rgb(29, 29, 29);
+    color: #e1e1e1;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+p.subtitle {
+    color: #e1e1e1;
+    text-align: center;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
+
+.button.is-outlined {
+    background-color: transparent;
+    border-color: #d6941a;
+    color: #d6941a;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button.is-outlined:hover {
+    color: #1a1919;
+    border-color: #d6941a;
+    background-color: #d6941a;
+}
+
+/* PLAY INSTRUMENT SECTION */
+
+#playInstruments {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#woodplay, #keyplay, #stringplay, #singplay {
+    display: flex;
+    justify-content: center;
+}
+
+
+.is-5by3 {
+    margin-bottom: 35px;
+}
+
+#woodImg {
+    background: url('https://images.pexels.com/photos/45243/saxophone-music-gold-gloss-45243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#stringsImg {
+    background: url('https://images.pexels.com/photos/4472061/pexels-photo-4472061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#keyboardImg {
+    background: url('https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tileBtn {
+    background-color: transparent;
+    border-color: #d6941a;
+    color: #d6941a;
+    margin: 30px 0; 
+}
+
+.tileBtn:hover {
+    color: #1a1919;
+    border-color: #d6941a;
+    background-color: #d6941a; 
+}
+
+/* FOOTER SECTION STYLING */
+.footer {
+    color: #e1e1e1;
+    background-color: rgb(29, 29, 29);
+    padding: 1.5rem 4.5rem 2rem;
+}
+
+
+
+
+/* for border fix on hamburger menu */
+@media only screen and (max-width: 1023px){
+    #navbar {
+        border-bottom: 1px solid transparent;
+        
+    }
+}
