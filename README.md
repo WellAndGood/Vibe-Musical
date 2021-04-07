@@ -4,8 +4,9 @@
 
 ## Table of Contents
 * [Introduction](#introduction)
+* [User Story](#story)
 * [Installations](#installations)
-* [Assignment details](#details)
+* [What can the app do?](#details)
 * [Credits](#credits)
 
  ## Introduction 
@@ -21,13 +22,22 @@ __DESKTOP VIEW__
 __MOBILE VIEW__
 ![image2](assets/images/mobile-home.png)
 
+## User Story
+  * As a user, I want to create a code that will take me to the deployed website.
+  * As a user, I should be able to see the home page, along with different sections related to our search.
+  * As a user, I can wiki  search about the history of  any global or exotic musical instrument that is found throughout the world.
+  * As a user,  I can learn how to play a specific musical instrument using video tutorials.
+  * As a user, I can play some interactive instruments, just for fun!
+  
 
- 
  ## Installations
    * [The URL of the Github repo](Https://GitHub.com/F34rTh3R34p3r/BCS-Project-1.git)
    * [The URL of the deployed application](Https://f34rth3r34p3r.github.io/BCS-Project-1/)
  
- ## Assignment Details
+ ## What can the app do?
+ Here's a chart off all the functions that our web app is required to do
+ ![image3](assets/images/chart.jpg)
+ 
 
     
    
