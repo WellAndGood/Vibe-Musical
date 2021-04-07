@@ -5,6 +5,8 @@
 ## Table of Contents
 * [Introduction](#introduction)
 * [User Story](#story)
+* [Design Process](#design)
+* [API's and Frameworks used](#api)
 * [Installations](#installations)
 * [What can the app do?](#details)
 * [Credits](#credits)
@@ -29,6 +31,20 @@ __MOBILE VIEW__
   * As a user, I can wiki  search about the history of  any global or exotic musical instrument that is found throughout the world.
   * As a user,  I can learn how to play a specific musical instrument using video tutorials.
   * As a user, I can play some interactive instruments, just for fun!
+
+ ## Design Process
+   * We used popular web app functionality of searching/clicking an instrument of your choice and displaying information in modals that guide the basic use of our app.
+   * We created various iterative processes that helped in testing the functionality of various API’s used for creating the app.
+   * We used a framework that was easy-to use to get our project off the ground.
+ 
+ ## API's and Frameworks used
+ | YOUTUBE  | WIKISEARCH  | BULMA  | FONTAWESOME 
+|---|---|---|--
+|   |   |   |  
+|   |   |   |  
+|   |   |   |   
+ 
+
   
 
  ## Installations
