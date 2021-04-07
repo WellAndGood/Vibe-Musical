@@ -20,6 +20,7 @@ __DESKTOP VIEW__
 ![image1](assets/images/HomePage.png)
 
 __MOBILE VIEW__
+
 ![image2](assets/images/mobile-home.png)
 
 ## User Story
