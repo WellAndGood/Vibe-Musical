@@ -30,7 +30,7 @@ Not only this, but the user will be able to learn how to play the searched instr
     
    
    ## Credits
-    The project has been assigned to me by the Carleton University Coding Bootcamp, our instructor and the TA's
+    The project has been assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
    
      
  
