@@ -29,7 +29,8 @@ const instrumentWikiList = ["Afoxé","Agogô","Agung","Angklung","Babendil","Bak
 
 $( function() {
     $( "#userInput" ).autocomplete({
-        source: instrumentWikiList
+        source: instrumentWikiList,
+        minLength: 2
     });
 });
 
@@ -78,18 +79,32 @@ function randomizer() {
 
 
 // The exeption handler; it returns correctly, but does not result in a changed 'term'
-function exceptionHandler(possible, list, handler) {
-    console.log(term, list, handler)
-    for (i = 0; i < list.length; i++) {
-        if (possible === list[i]) {
-            console.log("Found " + term + " in " + Object.keys({list})[0])
-            term = possible + handler
-            console.log(term)
-            return;
+// function exceptionHandler(possible, list, handler) {
+//     console.log(term, list, handler)
+//     for (i = 0; i < list.length; i++) {
+//         if (possible === list[i]) {
+//             console.log("Found " + term + " in " + Object.keys({list})[0])
+//             term = possible + handler
+//             console.log(term)
+//             return;
+//         }
+//     }
+// }
 
-        }
-    }
-}
+// function handlePossibleTerms() {
+//     exceptionHandler(term, accordionException, "_(accordion)");
+//     exceptionHandler(term, drumException, "_(drum)");
+//     exceptionHandler(term, fluteException, "_(flute)");
+//     exceptionHandler(term, instrumentException, "_(instrument)");
+//     exceptionHandler(term, musicException, "_(music)");
+//     exceptionHandler(term, musicInstrumentException, "_(musical_instrument)");
+//     exceptionHandler(term, organException, "_(organ)");
+//     exceptionHandler(term, panpipeException, "_(panpipe)");
+//     exceptionHandler(term, persianInstrumentException, "_(Persian_instrument)");
+//     exceptionHandler(term, stringInstrumentException, "_(string_instrument)");
+//     exceptionHandler(term, trumpetException, "_(trumpet)");
+//     exceptionHandler(term, windInstrumentException, "_(wind_instrument)");
+// }
 
 function goWiki() {
     
@@ -117,6 +132,7 @@ function goWiki() {
         // ...submits the unchanged term to the YouTube API before handling exceptions for Wikipedia API 
         formSubmitHandler(term)
         // handlePossibleTerms()
+
         // Submits the modified term to the Wikipedia API 
         wikipediaAPIQuery(term);
         
@@ -136,21 +152,6 @@ function goWiki() {
         firstVideoEl.textContent = ""
         relatedVideosEl.textContent = ""
     }
-}
-
-function handlePossibleTerms() {
-    exceptionHandler(term, accordionException, "_(accordion)");
-    exceptionHandler(term, drumException, "_(drum)");
-    exceptionHandler(term, fluteException, "_(flute)");
-    exceptionHandler(term, instrumentException, "_(instrument)");
-    exceptionHandler(term, musicException, "_(music)");
-    exceptionHandler(term, musicInstrumentException, "_(musical_instrument)");
-    exceptionHandler(term, organException, "_(organ)");
-    exceptionHandler(term, panpipeException, "_(panpipe)");
-    exceptionHandler(term, persianInstrumentException, "_(Persian_instrument)");
-    exceptionHandler(term, stringInstrumentException, "_(string_instrument)");
-    exceptionHandler(term, trumpetException, "_(trumpet)");
-    exceptionHandler(term, windInstrumentException, "_(wind_instrument)");
 }
 
 function wikipediaAPIQuery(term) {
@@ -249,12 +250,10 @@ function wikipediaAPIQuery(term) {
                         historyDisplay.innerHTML += "<br>";
                         historyDisplay.appendChild(p3);
                     } else {
-                        // If unsuccessful, removes the history title
-                        historyTitle.textContent = ""
+                        historyTitle.textContent = "" // If unsuccessful, removes the history title
                     }
                 })
-                .catch(function(error) {
-                    // If there was an error,  
+                .catch(function(error) { // If there's been an error...
                     console.error('Error: ', error);
                     historyTitle.textContent = ""
                     historyDisplay.textContent = "Error. Information not available at this time."
@@ -281,14 +280,16 @@ function formSubmitHandler(term) {
 //Fetches request and obtains a video ID
 var getVideoID = function (userInput) {
 
-    var apiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + userInput + ' instrument lesson beginner&type=video&videoEmbeddable=true&videoType=any&maxResults=1&key=AIzaSyApIhHN3Gg2LbGJvTpZBAktr6RE1etFe90';
+// Two APIs to use/swap out in case of query overload
+// AIzaSyBvPeortAvnykk35bYfFZP0AVaJ--QxNog
+// AIzaSyApIhHN3Gg2LbGJvTpZBAktr6RE1etFe90
+
+    var apiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + userInput + ' instrument lesson beginner&type=video&videoEmbeddable=true&videoType=any&maxResults=1&key=AIzaSyBvPeortAvnykk35bYfFZP0AVaJ--QxNog';
     fetch(apiUrl)
     .then(function (response) {
         if (response.ok) {
-            response.json().then(function (data) {
-            // console.log(data)
+            response.json().then(function (data) { 
             video=data.items[0].id.videoId
-            // console.log(video)
             displayVideo(video) // For main, autoplay video
             getRelatedVideoID(video) // For smaller four videos at bottom
             return video;
@@ -306,7 +307,7 @@ var getVideoID = function (userInput) {
  var displayVideo = function(id) {
     frameEl= document.createElement('iframe')
     frameEl.width= "700"; 
-    frameEl.allow="autoplay"
+    //frameEl.allow="autoplay" // no autoplay; uncomment if you want it
     frameEl.setAttribute("id","frame")
     frameEl.height= "500",
     frameEl.allowFullscreen=true
@@ -317,14 +318,12 @@ var getVideoID = function (userInput) {
 //fetching the request and get the relatedvideoID's to be played
 var getRelatedVideoID = function(idVideo) {
   
-    var apiUrl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+idVideo+'&type=video&videoEmbeddable=true&maxResults=4&key=AIzaSyApIhHN3Gg2LbGJvTpZBAktr6RE1etFe90';  
+    var apiUrl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId='+idVideo+'&type=video&videoEmbeddable=true&maxResults=4&key=AIzaSyBvPeortAvnykk35bYfFZP0AVaJ--QxNog';  
     fetch(apiUrl)
     .then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
-            // console.log(data)
             relatedVideo=data.items
-            // console.log(relatedVideo)
             displayRelatedVideo(relatedVideo)
         });
         } else { 
@@ -343,7 +342,6 @@ var displayRelatedVideo = function(item) {
     for (i=0;i<item.length;i++) {
         var myframeEl= document.createElement('iframe')
         relatedVideoId=item[i].id.videoId
-        // console.log(relatedVideoId)
         myframeEl.setAttribute("id","frame")
         myframeEl.allowFullscreen=true
         myframeEl.setAttribute("src","https://www.youtube.com/embed/"+relatedVideoId+"?autoplay=1")
