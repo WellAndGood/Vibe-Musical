@@ -13,7 +13,7 @@
 Not only this, but the user will be able to learn how to play the searched instrument with the help of a series of video tutorials. And if getting bored you can play some instruments to prop up your mood. 
 
 ![image1](assets/images/HomePage.png)
-![image2](assets/images/Mobile-home.png)
+![image2](assets/images/mobile-home.png)
 
 
 
