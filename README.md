@@ -40,10 +40,10 @@ __MOBILE VIEW__
  ## API's and Frameworks used
  | YOUTUBE  | WIKISEARCH  | BULMA  | FONTAWESOME 
 |---|---|---|--
-| Used to search for videos |The API allows access to some wiki-features 
-matching specific search terms,| like authentication, page operations, 
-topics and instrument.|and helps to search the history related
-Library used to install it :| to any global instrument.
+| Used to search for videos matching specific search terms,topics and instrument. | The API allows access to some wiki-features like authentication, page operations, and helps to search the history related  to any global instrument.|
+                                  
+                                    
+Library used to install it :|                                   
 You tube Data API V3                                
 
  
